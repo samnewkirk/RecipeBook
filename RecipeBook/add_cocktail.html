@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+  <style>
+
+    .bottom{
+      text-align: center;
+      margin-top: 500px;
+    }
+
+    .counter{
+      text-align: right;
+    }
+
+    .row {
+    height: 800px;
+    padding: 0px 10px 0px 10px; /*padding: top right bottom left; */
+    }
+
+    .timer{
+      text-align: center;
+    }
+
+    a:link, a:visited{
+      margin-left: 30px;
+      padding: 15px 25px 5px 15px;
+      text-decoration: none;
+      font-family: Verdana, Geneva, sans-serif;
+      color: black;
+    }
+
+    a:hover{
+      margin-left: 30px;
+      padding: 15px 25px 5px 15px;
+      text-decoration: underline;
+      font-family: Verdana, Geneva, sans-serif;
+      color: black;
+    }
+
+    a:active{
+      margin-left: 30px;
+      padding: 15px 25px 5px 15px;
+     text-decoration: underline; 
+     font-family: Verdana, Geneva, sans-serif;
+     color: black;
+    }
+    div#notifications {
+      position: absolute;
+      margin-left: 30px;
+      top: 20px;
+      left: 0px;
+      height: 700px;
+      width: 300px;
+      overflow: hidden;
+    }
+
+    div#notifications div.notification {
+      margin-bottom: 10px;
+      /*padding: 5px 0px 5px 0px; padding: top right bottom left; */
+      margin-left: 40px;
+      font-family: Verdana, Geneva, sans-serif;
+      font-size: 14px;
+      /*text-align: center;*/
+    }
+
+    div#notifyGradient {
+      position: absolute;
+      margin-left: 40px;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      background-color: white;
+      background: -webkit-linear-gradient(
+        rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%
+      );
+      background: linear-gradient(
+        rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%
+      );
+    }
+    p{
+      font-family: Verdana, Geneva, sans-serif;
+    }
+
+  </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+ <div class="container pt-3"></div>  
+  <div class="row">
+    <!--Left-->
+    <div class="col"> <!-- style="background-color:#aaa;">-->
+    </div>
+    <!--Left-->
+
+    <!--Middle-->
+      <!--Column 1-->
+    <div class="col" style="padding: 15px 15px 5px 15px;">
+	<a href= "index.html"><b><u>Recipe Book</b></u></a><br><br>
+    </div>
+      <!--Column 1-->
+      <!--Column 2-->
+    <div class="col" style="padding: 15px 15px 5px 15px;">
+	<form action= "add_cocktail.php" method= "POST">
+		<br><br>
+		<input type = "text" name="name" placeholder="Drink Name"><br>
+		<input type = "text" name="spirit" placeholder="Spirit"><br>
+		<input type = "text" name="type" placeholder="Type"><br>
+		<input type = "text" name="rec" placeholder="Recipe"><br>
+		<br><br>
+		<button type="submit" style="width: 175px;" data-toggle="tooltip" data-placement="right"  name="add" class="btn btn-dark" >Add Recipe</button><br><br>
+	</form>
+
+    </div>
+    <!--Column 2-->
+
+    <!--Column 3-->
+    <div class="col" style="padding: 15px 25px 5px 15px;">
+    </div>
+    <!--Column 3-->
+    <!--Middle-->
+
+    <!--Right-->
+    <div class="col" style="padding: 15px 25px 5px 15px;"><!-- background-color:#aaa;"> -->
+   
+    </div>
+    <!--Right-->
+  </div> <!--container-->
+</body>
+</html>

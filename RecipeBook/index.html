@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+
+    .bottom{
+      text-align: center;
+      margin-top: 500px;
+    }
+
+    .counter{
+      text-align: right;
+    }
+
+    .row {
+    height: 800px;
+    padding: 0px 10px 0px 10px; /*padding: top right bottom left; */
+    }
+
+    .timer{
+      text-align: center;
+    }
+
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px dotted black;
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+
+      /* Position the tooltip */
+      position: absolute;
+      z-index: 1;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+
+    a:link, a:visited{
+      margin-left: 30px;
+      padding: 15px 25px 5px 15px;
+      text-decoration: none;
+      font-family: Verdana, Geneva, sans-serif;
+      color: black;
+    }
+
+    a:hover{
+      margin-left: 30px;
+      padding: 15px 25px 5px 15px;
+      text-decoration: underline;
+      font-family: Verdana, Geneva, sans-serif;
+      color: black;
+    }
+
+    a:active{
+      margin-left: 30px;
+      padding: 15px 25px 5px 15px;
+     text-decoration: underline; 
+     font-family: Verdana, Geneva, sans-serif;
+     color: black;
+    }
+
+    div.items{
+      margin-left: 125px;
+    }
+    div#notifications {
+      position: absolute;
+      margin-left: 30px;
+      top: 20px;
+      left: 0px;
+      height: 700px;
+      width: 300px;
+      overflow: hidden;
+    }
+
+    div#notifications div.notification {
+      margin-bottom: 10px;
+      /*padding: 5px 0px 5px 0px; padding: top right bottom left; */
+      margin-left: 40px;
+      font-family: Verdana, Geneva, sans-serif;
+      font-size: 14px;
+    }
+
+    div#notifyGradient {
+      position: absolute;
+      margin-left: 40px;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      background-color: white;
+      background: -webkit-linear-gradient(
+      rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%
+      );
+      background: linear-gradient(
+      rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%
+      );
+    }
+    p{
+      font-family: Verdana, Geneva, sans-serif;
+    }
+
+  </style>
+</head>
+<body>
+ <div class="container pt-3"></div>  
+  <div class="row">
+    <!--Left-->
+    <div class="col"><!-- style="background-color:#aaa;">-->
+      <div id= "notifications" classname= "notifications">
+        <div id= "notify"class= "notification"></div>
+        <div id= "notifyGradient"></div>
+      </div>
+    </div>
+    <!--Left-->
+
+    <!--Middle-->
+    <!--Column 1-->
+    <div class="col" style="padding: 15px 15px 5px 15px;">
+	<a href= "index.html"><b><u>Recipe Book</b></u></a><br><br>
+       <form action= "cocktail_recipe.php" method= "POST">
+		<button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $35" name="ol_fash" class="btn btn-dark" >Old Fashioned</button><br><br>
+		<button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $40" name="avi" class="btn btn-dark" >Aviation no. 1</button><br><br>
+		<button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $35" name="corpse" class="btn btn-dark" >Corpse Reviver</button><br><br>
+		<button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $25" name="gt" class="btn btn-dark" >Gin & Tonic</button><br><br>
+		<button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $25" name="marg" class="btn btn-dark" >Margarita</button><br><br>
+		<button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $25" name="ameri" class="btn btn-dark" >Americano</button><br><br>
+		<button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $35" name="french" class="btn btn-dark" >French 75</button><br><br>
+		<button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $40" name="toronto" class="btn btn-dark" >Toronto</button><br><br>
+		<button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $35" name="mai" class="btn btn-dark" >Mai Tai</button><br><br>
+		<button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $40" name="pen" class="btn btn-dark" >Penicillin</button><br><br>
+		</form>       
+    </div>
+    <!--Column 1-->
+    
+    <!--Column 2-->
+    <div class="col" style="padding: 15px 15px 5px 15px;">
+	<br><br>
+	<div class= "items">  
+      <form action= "food_recipe.php" method= "POST">
+		<button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $35" name="c_salad" class="btn btn-dark" >Chicken Salad</button><br><br>
+		<button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $40" name="tantan" class="btn btn-dark" >Tantanmen</button><br><br>
+		<button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $25" name="taco" class="btn btn-dark" >Taco Meat</button><br><br>
+		<button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $35" name="curry" class="btn btn-dark" >Thai Curry</button><br><br>
+		<button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $25" name="cookie" class="btn btn-dark" >Chocolate Chip Cookies</button><br><br>
+		<button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $35" name="rib" class="btn btn-dark" >Seared Ribeye</button><br><br>
+		<button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $40" name="ench" class="btn btn-dark" >Enchiladas</button><br><br>
+		<button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $40" name="pie" class="btn btn-dark" >Shepard's Pie</button><br><br>
+		<button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $25" name="bol" class="btn btn-dark" >Bolognese</button><br><br>
+		<button type="submit" style="width: 150px;" data-toggle="tooltip" data-placement="right" title="cost: $35" name="sal" class="btn btn-dark" >Oven Baked Salmon</button><br><br>
+      </form>
+    </div>
+    </div>
+    <!--Column 2--> 
+
+    <!--Column 3-->
+    <div class="col" style="padding: 15px 25px 5px 15px;">
+		<a href= "add_cocktail.html"><b><u>Add Cocktail Recipe</b></u></a><br><br>
+    </div>
+    <!--Middle-->
+
+    <!--Right-->
+    <div class="col" style="padding: 15px 25px 5px 15px;"> <!-- background-color:#aaa;"> -->
+		<a href= "add_food.html"><b><u>Add Food Recipe</b></u></a><br><br>
+    </div>
+    <!--Right-->
+     
+  </div> <!--container-->
+</body>
+</html>
